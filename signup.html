@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" type="text/css" />
+		<link rel="stylesheet" href="./assets/styles/header.css" />
+		<link rel="stylesheet" href="./assets/styles/form.css" />
+
+		<title>Sign Up</title>
+	</head>
+	<body>
+		<main>
+			<div class="row col-12 m-0 align-items-stretch form-container">
+				<div class="col-lg-5 d-none d-lg-inline-grid _iasnfi">
+					<h3>Perhaps a logo of the department or a gif/video/pic of the department should be here</h3>
+				</div>
+				<div class="col-lg-7 form-main has-scroll">
+					<div class="form-main-container col-md-8 col-lg-10 col-xl-8 mx-auto">
+						<div class="my-4"><h3>Register</h3></div>
+						<ul class="nav nav-pills" id="pills-tab" role="tablist">
+							<li class="nav-item" role="presentation">
+								<button
+									class="nav-link active"
+									id="pills-chemical-tab"
+									data-bs-toggle="pill"
+									data-bs-target="#pills-chemical"
+									type="button"
+									role="tab"
+									aria-controls="pills-chemical"
+									aria-selected="true">
+									Chemical Engineering
+								</button>
+							</li>
+							<li class="nav-item" role="presentation">
+								<button
+									class="nav-link"
+									id="pills-pgg-tab"
+									data-bs-toggle="pill"
+									data-bs-target="#pills-pgg"
+									type="button"
+									role="tab"
+									aria-controls="pills-pgg"
+									aria-selected="false">
+									Petroleum and gas
+								</button>
+							</li>
+						</ul>
+						<div class="extra-info">
+							<small>
+								Please fill the form according to your Department as an <span>Alumni</span> or an <span>Undergraduate</span>
+							</small>
+						</div>
+						<form action="">
+							<div class="tab-content" id="pills-tabContent">
+								<div
+									class="tab-pane fade show active"
+									id="pills-chemical"
+									role="tabpanel"
+									aria-labelledby="pills-chemical-tab"
+									tabindex="0">
+									<div class="form-controls-container">
+										<!-- each form input @::start -->
+										<div class="form-input">
+											<label for="fullname" class="form-label">Fullname:</label>
+											<input type="text" class="form-control" autocomplete="off" value="" id="fullname" placeholder="" />
+										</div>
+										<!-- each form input @::end -->
+										<!-- each form input @::start -->
+										<div class="form-input">
+											<label for="email" class="form-label">Email:</label>
+											<input type="email" value="" class="form-control" autocomplete="off" id="email" placeholder="" />
+											<small class="official">Strictly for official purpose <span>*</span></small>
+										</div>
+										<!-- each form input @::end -->
+										<!-- each form input @::start -->
+										<div class="form-input">
+											<label for="phone" class="form-label">Phone:</label>
+											<input
+												type="tel"
+												inputmode="numeric"
+												class="form-control"
+												autocomplete="off"
+												value=""
+												id="phone"
+												placeholder="" />
+											<small class="official">Strictly for official purpose <span>*</span></small>
+										</div>
+										<!-- each form input @::end -->
+										<!-- each form input @::start -->
+										<div class="form-input category">
+											<label for="chem-select-category" class="form-label"> Select category:</label>
+											<input
+												type="text"
+												inputmode="text"
+												value=""
+												class="form-control select-category-class"
+												autocomplete="off"
+												id="pgg-select-category"
+												placeholder="Select category" />
+											<ul class="select-category has-dropdown has-scroll">
+												<li>
+													<button name="alumni" type="button">Alumni</button>
+												</li>
+												<li>
+													<button name="staff" type="button">Staff</button>
+												</li>
+												<li>
+													<button name="student" type="button">Student</button>
+												</li>
+											</ul>
+										</div>
+										<!-- each form input @::end -->
+										<!-- each form input @::start -->
+										<div class="form-input graduation-year-form-input">
+											<label for="chem-graduation-year" class="form-label"> Graduation year: </label>
+											<input
+												type="text"
+												inputmode="text"
+												value=""
+												class="form-control graduation-year"
+												autocomplete="off"
+												id="chem-graduation-year"
+												placeholder="Enter graduation year" />
+											<ul class="graduation-year has-dropdown has-scroll">
+												<li><button type="button">2020</button></li>
+												<li><button type="button">2020</button></li>
+												<li><button type="button">2021</button></li>
+												<li><button type="button">2021</button></li>
+												<li><button type="button">2022</button></li>
+												<li><button type="button">2022</button></li>
+												<li><button type="button">2023</button></li>
+												<li><button type="button">2023</button></li>
+												<li><button type="button">2024</button></li>
+												<li><button type="button">2024</button></li>
+											</ul>
+										</div>
+										<!-- each form input @::end -->
+									</div>
+								</div>
+								<div class="tab-pane fade" id="pills-pgg" role="tabpanel" aria-labelledby="pills-pgg-tab" tabindex="0">
+									<div class="form-controls-container">
+										<!-- each form input @::start -->
+										<div class="form-input">
+											<label for="fullname" class="form-label">Fullname:</label>
+											<input type="text" class="form-control" autocomplete="off" value="" id="fullname" placeholder="" />
+										</div>
+										<!-- each form input @::end -->
+										<!-- each form input @::start -->
+										<div class="form-input">
+											<label for="email" class="form-label">Email:</label>
+											<input type="email" value="" class="form-control" autocomplete="off" id="email" placeholder="" />
+											<small class="official">Strictly for official purpose <span>*</span></small>
+										</div>
+										<!-- each form input @::end -->
+										<!-- each form input @::start -->
+										<div class="form-input">
+											<label for="phone" class="form-label">Phone:</label>
+											<input
+												type="tel"
+												inputmode="numeric"
+												class="form-control"
+												autocomplete="off"
+												value=""
+												id="phone"
+												placeholder="" />
+											<small class="official">Strictly for official purpose <span>*</span></small>
+										</div>
+										<!-- each form input @::end -->
+										<!-- each form input @::start -->
+										<div class="form-input category">
+											<label for="pgg-select-category" class="form-label"> Select category:</label>
+											<input
+												type="text"
+												inputmode="text"
+												value=""
+												class="form-control select-category-class"
+												autocomplete="off"
+												id="pgg-select-category"
+												placeholder="Select category" />
+											<ul class="select-category has-dropdown has-scroll">
+												<li>
+													<button name="alumni" type="button">Alumni</button>
+												</li>
+												<li>
+													<button name="staff" type="button">Staff</button>
+												</li>
+												<li>
+													<button name="student" type="button">Student</button>
+												</li>
+											</ul>
+										</div>
+										<!-- each form input @::end -->
+										<!-- each form input @::start -->
+										<div class="form-input graduation-year-form-input">
+											<label for="pgg-graduation-year" class="form-label"> Graduation year: </label>
+											<input
+												type="text"
+												inputmode="text"
+												value=""
+												class="form-control graduation-year"
+												autocomplete="off"
+												id="pgg-graduation-year"
+												placeholder="Enter graduation year" />
+											<ul class="graduation-year has-dropdown has-scroll">
+												<li><button type="button">2020</button></li>
+												<li><button type="button">2020</button></li>
+												<li><button type="button">2021</button></li>
+												<li><button type="button">2021</button></li>
+												<li><button type="button">2022</button></li>
+												<li><button type="button">2022</button></li>
+												<li><button type="button">2023</button></li>
+												<li><button type="button">2023</button></li>
+												<li><button type="button">2024</button></li>
+												<li><button type="button">2024</button></li>
+											</ul>
+										</div>
+										<!-- each form input @::end -->
+									</div>
+								</div>
+								<div class="submit-btn-container"><button type="submit">Submit</button></div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</main>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="./assets/js/signup.js"></script>
+	</body>
+</html>

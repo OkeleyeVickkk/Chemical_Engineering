@@ -1,0 +1,25 @@
+.v-marquee-section {
+	padding-block: 5rem;
+}
+.v-marquee-section .v-images-container {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	gap: 1rem;
+}
+.v-marquee-section .v-each-image {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 12px;
+	height: 200px;
+	overflow: hidden;
+	max-width: 300px;
+	width: 100%;
+}
+.v-marquee-section .v-each-image .img-fluid {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center center;
+}

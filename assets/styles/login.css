@@ -1,0 +1,143 @@
+main {
+	--gray: #cfd4d826;
+	--white: #fff;
+	--sm-radius: 0.4rem;
+	--form-input-clr: #f6f7f957;
+	--border-wt-clr-md: 1.5px solid;
+	--shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.v-house_container {
+	background-color: var(--gray);
+}
+.v-house_container .row {
+	min-height: 100vh;
+	padding: 0.5rem;
+	min-height: 100dvh;
+	height: 100dvh;
+	position: relative;
+}
+.v-house_container .v-sign-in-container {
+	background-color: var(--white);
+	box-shadow: var(--shadow);
+	border-radius: var(--sm-radius);
+	padding: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.v-sign-in-container header {
+	display: flex;
+	flex-direction: column;
+	row-gap: 10px;
+}
+.v-sign-in-container .v-title {
+	font-weight: 700;
+	color: var(--primary-clr);
+}
+.v-sign-in-container .v-subtext {
+	font-size: 0.9rem;
+	letter-spacing: -0.3px;
+	font-weight: 500;
+	opacity: 0.4;
+}
+.v-inner-sign-in form {
+	margin-top: 3rem;
+}
+.v-inner-sign-in form .d-flex {
+	row-gap: 1.2rem;
+}
+.v-form-input {
+	position: relative;
+	overflow: hidden;
+}
+.v-form-input .form-control::placeholder {
+	font-size: 0.8rem;
+	opacity: 0.5;
+}
+.v-form-input .form-control {
+	border-width: 1.5px;
+	min-height: 3rem;
+	padding-inline-start: 3.3rem;
+	font-size: 0.9rem;
+	font-weight: 500;
+	background-color: var(--form-input-clr);
+	border-radius: 5px;
+}
+.v-form-input .form-control:focus {
+	box-shadow: none;
+	border: var(--border-wt-clr-md) var(--primary-clr);
+}
+.v-form-input .v-icon-container {
+	top: 50%;
+	background-color: var(--white);
+	border-radius: 4px;
+	display: flex;
+	pointer-events: none;
+	user-select: none;
+	translate: 0 -50%;
+	align-items: center;
+	justify-content: center;
+	padding: 5px 7px;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 0.5px 2px;
+	left: 10px;
+}
+.v-form-input .form-control[type="password"] {
+	padding-inline-end: 3rem;
+}
+.v-form-input .v-icon-container svg {
+	--size: 1.2rem;
+	width: var(--size);
+	height: var(--size);
+	color: var(--primary-clr);
+}
+.v-form-input .v-password-toggler {
+	right: 0;
+	width: max-content;
+	top: 0;
+	bottom: 0;
+	border-radius: 0 5px 5px 0;
+	padding: 0 1.5rem;
+	font-size: 0.8rem;
+	margin: 1.5px 1.5px 1.5px 0;
+	background-color: var(--gray);
+	background-image: linear-gradient(to right #fff, #fdfeff00);
+}
+.v-submit-btn {
+	margin-top: 2rem;
+}
+.v-submit-btn button {
+	background-color: var(--primary-clr);
+	min-height: 3rem;
+	border-radius: 4px;
+	color: var(--white);
+	font-weight: 600;
+	text-transform: uppercase;
+	font-size: 0.9rem;
+}
+.v-sign-up {
+	margin-top: 2rem;
+}
+.v-sign-up > span {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	justify-content: center;
+}
+.v-sign-up > span > span {
+	font-weight: 400;
+	font-size: 0.9rem;
+	opacity: 0.7;
+	letter-spacing: -0.3px;
+}
+.v-sign-up > span > a {
+	font-weight: 600;
+	color: var(--primary-clr);
+	text-decoration: underline;
+	text-decoration-color: transparent;
+	text-underline-offset: 10px;
+	transition-duration: 400ms;
+}
+.v-sign-up > span > a:hover {
+	text-underline-offset: 1px;
+	text-decoration-color: var(--primary-clr);
+}

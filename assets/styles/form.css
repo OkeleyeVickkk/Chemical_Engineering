@@ -1,0 +1,192 @@
+.form-main {
+	overflow-y: scroll;
+	max-height: 100vh;
+	max-height: 100dvh;
+}
+.has-scroll::-webkit-scrollbar {
+	width: 6px;
+	background-color: var(--grey);
+}
+.has-scroll::-webkit-scrollbar-thumb {
+	background-color: var(--primary-clr);
+	border-radius: 100px;
+}
+.form-main-container {
+	--block-size: 12rem;
+	margin-block: var(--block-size) calc(var(--block-size) / 4);
+}
+.form-main .nav-pills {
+	background-color: var(--grey);
+	border-radius: 4px;
+	padding: 0.4rem;
+	border-radius: 6px;
+	gap: 2px;
+}
+.form-main .nav-pills + .extra-info {
+	margin-block: 0.5rem 2rem;
+	text-align: center;
+}
+.form-main .nav-pills + .extra-info small {
+	font-weight: 400;
+	line-height: 1.6;
+	display: -webkit-box;
+	font-size: 0.78rem;
+}
+.form-main .nav-pills + .extra-info small span {
+	font-weight: 500;
+}
+.form-main .nav-pills .nav-item {
+	flex-grow: 1;
+}
+.form-main .nav-pills .nav-link {
+	width: 100%;
+	font-weight: 600;
+	font-size: 0.8rem;
+	padding-block: 0.7rem;
+	color: var(--text-clr);
+	text-transform: uppercase;
+}
+.form-main .nav-pills .nav-link.active {
+	background-color: var(--white);
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+	color: var(--primary-clr);
+}
+.form-container {
+	min-height: 100vh;
+	min-height: 100dvh;
+}
+.form-container .form-main {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.form-container ._iasnfi {
+	background-color: var(--primary-clr);
+	place-content: center;
+	padding-inline: 4rem;
+	text-align: center;
+}
+.form-container .form-controls-container {
+	display: flex;
+	flex-direction: column;
+	row-gap: 0.6rem;
+}
+.form-container .form-main .form-control {
+	border: var(--border-md);
+	min-height: 2.8rem;
+	font-size: 0.85rem;
+	font-weight: 500;
+	border-radius: 4px;
+}
+.form-container .outer-form-input {
+	display: grid;
+	grid-template-rows: 0fr;
+}
+.form-container .form-input .form-control:disabled {
+	background-color: var(--grey);
+	cursor: not-allowed;
+}
+.form-container .form-input .form-control::placeholder {
+	opacity: 0.5;
+	font-size: 0.7rem;
+	font-weight: 400;
+	letter-spacing: -0.2px;
+}
+.form-container .form-input {
+	position: relative;
+}
+.form-controls-container .form-input :where(.has-dropdown) {
+	bottom: 76%;
+	left: 0;
+	right: 0;
+	border-radius: 6px;
+	position: absolute;
+	width: 100%;
+	translate: 0 -3rem;
+	background-color: var(--white);
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+	z-index: 2;
+	transition-property: opacity, translate;
+	transition-duration: 400ms;
+	pointer-events: none;
+	opacity: 0;
+	display: flex;
+	flex-direction: column;
+	row-gap: 2px;
+	border: 1px solid transparent;
+	overflow: auto;
+	padding: 0.5rem;
+}
+.form-controls-container .form-input .graduation-year.has-dropdown {
+	height: 180px;
+	overflow-y: auto;
+}
+.form-controls-container .form-input .select-category.has-dropdown {
+	height: max-content;
+}
+.form-controls-container .form-input .select-category .form-control {
+	pointer-events: none !important;
+	caret-color: transparent;
+}
+.form-controls-container .graduation-year-form-input {
+	display: none;
+}
+.form-controls-container .graduation-year-form-input.isVisible {
+	display: block;
+}
+.form-input .has-dropdown button {
+	background-color: transparent;
+	text-align: start;
+	font-size: 0.8rem;
+	padding: 0.475rem 0.75rem;
+	border-radius: 3px;
+	width: 100%;
+	transition-timing-function: ease;
+	opacity: 0.8;
+	color: var(--text-clr);
+}
+.form-input .has-dropdown button:hover {
+	background-color: var(--primary-clr-opacity);
+}
+.form-controls-container .form-input:focus-within .has-dropdown {
+	opacity: 1;
+	translate: 0;
+	pointer-events: auto;
+}
+
+.form-container .form-input .official {
+	font-size: 0.7rem;
+	color: var(--text-clr);
+	opacity: 0.6;
+	display: block;
+}
+.form-container .form-input .official span {
+	color: var(--red);
+}
+.form-container .form-input:focus-within .official {
+	opacity: 1;
+}
+.form-container .form-input .form-label {
+	font-size: 0.84rem;
+	margin-bottom: 3px;
+	line-height: 1;
+}
+.form-container .form-main .form-control:focus {
+	box-shadow: none;
+	border-color: var(--primary-clr);
+}
+.form-container .submit-btn-container {
+	margin-top: 2rem;
+}
+.form-container .submit-btn-container button {
+	border: none;
+	min-height: 3rem;
+	will-change: background;
+	border-radius: 6px;
+	color: var(--white);
+	background-color: var(--primary-clr);
+	text-transform: uppercase;
+}
+.form-container .submit-btn-container button:hover {
+	background-color: var(--primary-clr-dark-variation);
+}

@@ -1,0 +1,103 @@
+main {
+	scroll-snap-type: y mandatory;
+	padding-block-start: 4rem;
+}
+main > section {
+	scroll-snap-align: center;
+}
+.v-container-title .v-title {
+	font-weight: 600;
+	text-transform: capitalize;
+}
+.v-color-it {
+	color: var(--primary-clr);
+	text-transform: uppercase;
+}
+.v-grid-container {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 2rem;
+	margin-block: 4rem;
+}
+@media all and (min-width: 768px) {
+	.v-grid-container {
+		gap: 4rem;
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+.v-grid-container .v-each-item {
+	position: relative;
+}
+.v-grid-container .v-each-item-inner {
+	display: flex;
+	color: var(--text-clr);
+	flex-direction: column;
+	row-gap: 10px;
+}
+.v-grid-container .v-each-item-inner .v-image-container {
+	overflow: hidden;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.v-grid-container .v-each-item-inner .v-each-item-content {
+	display: flex;
+	flex-direction: column;
+	row-gap: 5px;
+	margin-top: 5px;
+}
+.v-each-item-inner .v-each-item-content span {
+	line-height: 1.2;
+}
+.v-each-item-inner .v-each-item-content .v-degree {
+	font-weight: 500;
+	opacity: 0.6;
+	font-size: 0.8rem;
+}
+.v-each-item-inner .v-each-item-content .v-position {
+	font-weight: 600;
+	opacity: 0.8;
+}
+.v-grid-container .v-name-title {
+	font-weight: 600;
+}
+
+.v-extra-tooltip {
+	position: absolute;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	background-color: var(--white);
+	width: max-content;
+	display: flex;
+	background-color: var(--white);
+	max-width: 100%;
+	z-index: 9;
+	top: -40%;
+	border-radius: 5px;
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	transform-origin: bottom;
+	transition-duration: 400ms;
+}
+.v-extra-tooltip::before {
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	background-color: var(--white);
+	content: "";
+	left: 50%;
+	scale: 1.2;
+	rotate: 45deg;
+	bottom: -5px;
+}
+.v-extra-tooltip .v-detail {
+	padding: 1rem;
+	font-size: 0.9rem;
+}
+.v-each-item:hover .v-extra-tooltip {
+	scale: 1;
+	opacity: 1;
+	visibility: visible;
+	pointer-events: auto;
+}

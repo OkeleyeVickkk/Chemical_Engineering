@@ -1,0 +1,103 @@
+.v-pre-footer {
+	padding-block: 6rem;
+	overflow: hidden;
+	color: var(--white);
+}
+.v-pre-footer .v-layer-image {
+	inset: 0;
+}
+.v-pre-footer .v-layer-image::before {
+	position: absolute;
+	content: "";
+	background-color: rgb(29, 28, 28, 55%);
+	backdrop-filter: blur(3px);
+	inset: 0;
+}
+.v-pre-footer .v-layer-image .img-fluid {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center center;
+}
+.v-pre-footer .v-content-container {
+	display: flex;
+	flex-direction: column;
+	row-gap: 2rem;
+	align-items: center;
+}
+.v-pre-footer .v-title-container .v-title {
+	font-weight: 800;
+	font-size: 2.5rem;
+}
+.v-pre-footer .v-content-container .v-subtext {
+	font-size: 0.9rem;
+	text-wrap: balance;
+}
+.v-pre-footer .v-link {
+	margin-block-start: 1rem;
+}
+.v-pre-footer .v-link a {
+	background-color: var(--primary-clr);
+	color: var(--white);
+	border-radius: 5px;
+	padding: 1rem 3rem;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 0.3px;
+	font-size: 0.9rem;
+}
+
+footer {
+	background-color: var(--primary-clr);
+}
+footer .container {
+	padding-block: 3rem;
+}
+footer .row {
+	padding-block: 3rem 2rem;
+	row-gap: 2rem;
+}
+footer .v-footer_inner section header {
+	font-weight: 700;
+	color: var(--white);
+}
+footer .v-footer_inner ul {
+	margin-top: 1rem;
+	display: flex;
+	flex-direction: column;
+	row-gap: 4px;
+}
+footer .v-footer_inner ul.v-social-links {
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	column-gap: 10px;
+}
+footer .v-footer_inner section ul a {
+	color: var(--white);
+	font-weight: 400;
+	opacity: 0.9;
+	font-size: 0.88rem;
+}
+footer .v-post-footer {
+	padding-block: 1.1rem;
+	padding-inline: 2rem;
+	background-color: var(--white);
+}
+footer .v-post-footer span {
+	font-weight: 500;
+	font-size: 0.8rem;
+	line-height: 1.4;
+	display: block;
+}
+.v-footer_inner section .v-location-container {
+	display: flex;
+	flex-direction: column;
+	row-gap: 3px;
+	margin-top: 1rem;
+}
+.v-footer_inner section .v-location-container span {
+	color: var(--white);
+	font-weight: 500;
+	font-size: 0.8rem;
+}
