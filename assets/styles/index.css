@@ -12,6 +12,9 @@ section.v-hero-section .v-image-layer {
 	height: 100%;
 	width: 100%;
 }
+section.v-hero-section .carousel-indicators {
+	z-index: 3;
+}
 section.v-hero-section #carousel-image-preview {
 	position: relative;
 }
@@ -122,4 +125,200 @@ section.v-introduction .row {
 	font-weight: 500;
 	margin-top: 0.2rem;
 	display: block;
+}
+.v-department {
+	padding-block: 6rem;
+	background-color: var(--primary-clr);
+	display: flex;
+	flex-direction: column;
+	row-gap: 3rem;
+}
+.v-silk-skin {
+	margin-block-start: 5rem;
+
+	& > .row {
+		row-gap: 4rem;
+	}
+
+	@media all and (max-width: 600px) {
+		margin-block-start: 4rem;
+	}
+}
+.v-images-wrapper-container {
+	--gap-size: 1.2rem;
+	gap: var(--gap-size);
+}
+.v-images-wrapper-container .v-image {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	overflow: hidden;
+	border-radius: 10px;
+}
+.v-images-wrapper-container .v-left {
+	row-gap: calc(var(--gap-size) * 1.2);
+}
+.v-images-wrapper-container .v-image .img-fluid {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center center;
+}
+.v-department .v-title-container .v-title {
+	font-weight: 800;
+	color: var(--white);
+	text-transform: uppercase;
+}
+.v-silk-skin :is(.v-content-title .v-title, .v-content-body span) {
+	color: var(--white);
+}
+.v-silk-skin .v-container {
+	display: flex;
+	flex-direction: column;
+	row-gap: 1.5rem;
+}
+.v-silk-skin .v-content-title .v-title {
+	font-weight: 700;
+	text-wrap: balance;
+}
+.v-silk-skin .v-content-body span {
+	font-size: 0.85rem;
+	opacity: 0.8;
+}
+.v-silk-skin .v-content-link a {
+	color: var(--primary-clr);
+	font-weight: 500;
+	background-color: var(--white);
+	border-radius: 4px;
+	padding: 0.8rem 2rem;
+	border: var(--border);
+	border: var(--border-md-wt-clr) transparent;
+	text-transform: uppercase;
+}
+.v-silk-skin .v-content-link {
+	margin-top: 1rem;
+}
+.v-silk-skin .v-content-link a:hover {
+	background-color: var(--primary-clr);
+	color: var(--white);
+	border-color: var(--white);
+}
+.v-gallery-section {
+	background-color: var(--white);
+	padding-block-end: 3rem;
+
+	& .v-grid-item-container {
+		padding-block: 2rem;
+		background-color: var(--primary-clr);
+
+		& .v-row {
+			position: relative;
+			border-top: var(--border-thin-wt-clr) var(--white);
+			--adjustment: 25%;
+
+			& .v-divider {
+				position: absolute;
+				height: 80%;
+				margin-block: auto;
+				width: 1.5px;
+				opacity: 0.3;
+				padding: 0;
+
+				background-color: var(--white);
+			}
+			& .v-1 {
+				left: calc(var(--adjustment) * 1);
+			}
+			& .v-2 {
+				left: calc(var(--adjustment) * 2);
+			}
+			& .v-3 {
+				left: calc(var(--adjustment) * 3);
+			}
+		}
+	}
+
+	& .v-item-inner {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		row-gap: 3px;
+		padding-block: 1.5rem;
+
+		& .v-key {
+			font-weight: 700;
+			letter-spacing: 0.3px;
+		}
+
+		& .v-value {
+			font-size: 0.9rem;
+			opacity: 0.9;
+		}
+	}
+	& .v-item-inner :is(.v-key, .v-value) {
+		color: var(--white);
+	}
+
+	& .v-image-gallery-scroll {
+		margin-block-start: 4rem;
+		display: flex;
+		flex-direction: column;
+		row-gap: 1rem;
+
+		& .v-gallery-title .v-title {
+			font-weight: 800;
+			color: var(--text-clr);
+			position: relative;
+			width: max-content;
+			margin-inline: auto;
+			isolation: isolate;
+
+			&::before {
+				content: "";
+				position: absolute;
+				border: 6px solid var(--primary-clr);
+				height: 100%;
+				width: 120%;
+				left: 50%;
+				right: 0;
+				aspect-ratio: 1/1;
+				border-radius: 50%;
+				top: 100%;
+				translate: -50% -10px;
+				z-index: -1;
+				border-color: var(--primary-clr) transparent transparent transparent;
+			}
+		}
+		& .splide__track {
+			padding-block: 4rem;
+		}
+
+		& .splide__slide:nth-child(even) {
+			translate: 0 3rem;
+		}
+
+		& .splide__slide {
+			height: 400px;
+
+			@media all and (max-width: 600px) {
+				& {
+					height: 250px;
+				}
+			}
+
+			& .v-image-container {
+				height: 100%;
+				overflow: hidden;
+				border-radius: 12px;
+
+				& .img-fluid {
+					height: 100%;
+					width: 100%;
+					object-fit: cover;
+					object-position: center center;
+				}
+			}
+		}
+	}
 }

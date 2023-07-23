@@ -11,12 +11,14 @@
 	--border-clr: #87878729;
 	--border-thin: 1px solid var(--border-clr);
 	--border-md: 1.5px solid var(--border-clr);
+	--border-md-wt-clr: 1.5px solid;
+	--border-thin-wt-clr: 1px solid;
 	--grey: #dddede24;
 	--white: #fff;
 	--text-clr: #292a2b;
 	--red: #ff0000;
 }
-:is(*, *::after, *::before) {
+:is(*, *::after, *::before):not(section.v-gallery-section *) {
 	font-family: var(--font-family);
 	text-rendering: optimizeLegibility;
 	box-sizing: border-box;
