@@ -76,8 +76,13 @@ footer .v-footer_inner ul.v-social-links {
 footer .v-footer_inner section ul a {
 	color: var(--white);
 	font-weight: 400;
-	opacity: 0.9;
+	opacity: 0.6;
 	font-size: 0.88rem;
+	will-change: opacity;
+
+	&:hover {
+		opacity: 1;
+	}
 }
 footer .v-post-footer {
 	padding-block: 1.1rem;

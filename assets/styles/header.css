@@ -17,6 +17,10 @@
 	--white: #fff;
 	--text-clr: #292a2b;
 	--red: #ff0000;
+	--bg-selection-clr: rgba(var(--color) / 40%);
+}
+*::selection {
+	background-color: var(--bg-selection-clr);
 }
 :is(*, *::after, *::before):not(section.v-gallery-section *) {
 	font-family: var(--font-family);

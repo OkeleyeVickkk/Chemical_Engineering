@@ -1,8 +1,8 @@
 main {
-	--gray: #cfd4d826;
+	--gray: #cfd4d87d;
 	--white: #fff;
 	--sm-radius: 0.4rem;
-	--form-input-clr: #f6f7f957;
+	--form-input-clr: #f6f7f926;
 	--border-wt-clr-md: 1.5px solid;
 	--shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
@@ -15,6 +15,38 @@ main {
 	min-height: 100dvh;
 	height: 100dvh;
 	position: relative;
+}
+.v-images-container :is(.splide__slide) {
+	height: calc(100vh - 0.5rem * 2) !important;
+
+	& .v-image-container {
+		height: 100%;
+		border-radius: 12px;
+		overflow: hidden;
+		& .img-fluid {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+			object-position: center center;
+		}
+	}
+}
+.splide__pagination {
+	background-color: transparent;
+	backdrop-filter: blur(4px);
+	min-height: 3rem;
+	margin: 10px !important;
+	padding-block: 0 !important;
+
+	& .splide__pagination__page {
+		--size: 12px;
+		height: var(--size);
+		width: var(--size);
+	}
+	& button.is-active {
+		background-color: var(--primary-clr);
+		opacity: 1;
+	}
 }
 .v-house_container .v-sign-in-container {
 	background-color: var(--white);
@@ -56,12 +88,13 @@ main {
 }
 .v-form-input .form-control {
 	border-width: 1.5px;
-	min-height: 3rem;
+	min-height: 3.2rem;
 	padding-inline-start: 3.3rem;
 	font-size: 0.9rem;
 	font-weight: 500;
 	background-color: var(--form-input-clr);
 	border-radius: 5px;
+	border: var(--border-md-wt-clr) #dee2e699;
 }
 .v-form-input .form-control:focus {
 	box-shadow: none;
@@ -98,9 +131,8 @@ main {
 	border-radius: 0 5px 5px 0;
 	padding: 0 1.5rem;
 	font-size: 0.8rem;
-	margin: 1.5px 1.5px 1.5px 0;
+	margin: 1.5px 0;
 	background-color: var(--gray);
-	background-image: linear-gradient(to right #fff, #fdfeff00);
 }
 .v-submit-btn {
 	margin-top: 2rem;

@@ -1,0 +1,18 @@
+.v-hero-section {
+	--height-dvh: 70vh;
+	--height-vh: 70vh;
+	max-height: calc(var(--height-vh) + 10vh);
+	max-height: calc(var(--height-dvh) + 10dvh);
+	min-height: calc(var(--height-dvh) + 5vh);
+	min-height: calc(var(--height-dvh) + 5dvh);
+	background-color: var(--primary-clr);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	& .v-title {
+		font-weight: 800;
+		color: var(--white);
+		text-transform: uppercase;
+	}
+}
